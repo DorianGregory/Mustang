@@ -11,6 +11,7 @@ function initiate(){
 	canvas = document.getElementById("canvas");
 	context=canvas.getContext('2d');
 }
+//hello this is leon. testing commit and brach
 
 //scene to draw
 function Scene(){
