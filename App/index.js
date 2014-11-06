@@ -53,7 +53,7 @@ function Scene(){
         {return false}
     }
     //window.scene instead of this problem
-    
+    //hi this is cole
     this.touchHandler = function(event){
         
         window.scene.touch.x = event.changedTouches[0].pageX;
