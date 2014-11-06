@@ -12,6 +12,8 @@ function initiate(){
 	context=canvas.getContext('2d');
 }
 
+//hi this is Gabriel
+
 //scene to draw
 function Scene(){
     //variables
