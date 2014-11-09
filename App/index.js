@@ -3,7 +3,10 @@ var canvas;
 var context;
 
 //LOAD JS FILE
-ejecta.include('script.js');
+ejecta.include('master.js');
+ejecta.include('game.js');
+ejecta.include('menus.js');
+ejecta.include('animations.js');
 //LOAD JS FILE
 
 //gets canvas, sets size, gets context
@@ -53,7 +56,6 @@ function Scene(){
         {return false}
     }
     //window.scene instead of this problem
-    //hi this is cole
     this.touchHandler = function(event){
         
         window.scene.touch.x = event.changedTouches[0].pageX;
