@@ -24,27 +24,34 @@ function Scene(){
     this.touch={x:0, y:0};
     this.interval;
     //methods
+    
+    //clears the scene
 	this.clear  = function(){
 		context.clearRect(0,0,canvas.width,canvas.height);
         this.children = [];
 	}
+    //draws the actual child
 	this.drawChild = function (child){
 		context.drawImage(child.image, child.x, child.y, child.width, child.height);
         this.children.push(child);
 	}
+    //draw a text child
     this.drawText = function (text){
         context.font = text.font;
         context.fillStyle = text.color;
         context.fillText(text.text, text.x, text.y);
         this.children.push();
     }
+    //start the scene animations (frames per second)
 	this.start = function(fps){
 		this.fps = fps;
 		this.interval = setInterval(update, 1000/fps);
 	}
+    //stop animations
 	this.pause = function(){
 		clearInterval(scene.interval);
 	}
+    //tests if point is inside child
     this.isPointInChild = function(x,y,child){
         console.log(child);
         if(x >= child.x &&
@@ -56,6 +63,7 @@ function Scene(){
         {return false}
     }
     //window.scene instead of this problem
+    //don't worry
     this.touchHandler = function(event){
         
         window.scene.touch.x = event.changedTouches[0].pageX;
@@ -71,8 +79,9 @@ function Scene(){
     }
     document.addEventListener('touchstart', this.touchHandler, false);
     document.addEventListener('touchend', this.click, false);
+    //stop not worrying
 }
-
+//images or children to draw
 function Child(img, x, y, width, height){
 	this.image = new Image();
 	this.image.src = img;
@@ -81,7 +90,7 @@ function Child(img, x, y, width, height){
 	this.width = width;
 	this.height = height;
 }
-
+//text to draw
 function Text(text, font, color, x, y){
     this.text = text;
     this.font= font;
