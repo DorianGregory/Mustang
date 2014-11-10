@@ -5,7 +5,7 @@ var scene = new Scene();
 
 
 //start the variable with frames per second
-//scene.start(60)
+scene.start(60)
 
 //update function that runs with each new frame
 function update(){
