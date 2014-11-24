@@ -1,3 +1,5 @@
+//the most important part; controls everything else
+
 initiate();
 //set up the scene variable
 var scene = new Scene();
