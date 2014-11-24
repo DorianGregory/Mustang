@@ -11,8 +11,7 @@ var background = new Child(“background.png”, 0, 0, canvas.width, canvas.heig
 scene.start(60)
 
 //play button which goes to start playing
-var playButton = new Child(“playbutton.jpg”, canvasWidth / 2, canvasHeight / 3, canvasWidth / 3,
-                           canvasHeight / 5);
+var playButton = new Child(“playbutton.jpg”, canvasWidth / 2, canvasHeight / 3, canvasWidth / 3, canvasHeight / 5);
 
 //the thing that activates when you click on it
 playButton.onClick = function(){

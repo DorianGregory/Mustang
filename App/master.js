@@ -12,5 +12,10 @@ scene.start(60)
 //update function that runs with each new frame
 function update(){
     scene.clear();
-    
+    if(isPlaying == true){
+        gameUpdate();
+    }
+    else{
+        menuUpdate();
+    }
 }
