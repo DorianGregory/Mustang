@@ -1,11 +1,12 @@
 
 //main character
 var mustang = new Child("Gogh.jpg", 10, 200, 200, 100);
-mustang.track = 0;
+mustang.track = 2;
 var background = new Child("background.jpg", 0, 0, canvas.width, canvas.height);
 //menu or game
 var isPlaying = false;
-
+//mustang.transitioning = {};
+//mustang.transitioning =
 //to call when starting game from menu
 
 //game object
@@ -23,6 +24,11 @@ function startMenu(){
 }
 function gameUpdate(){
     scene.drawChild(background);
-    mustang.height = mustang.track*canvas.height + canvas.height/6;
-    scene.drawChild(mustang)
+    if()
+    mustang.height = mustang.track*canvas.height/3 + canvas.height/6;
+    scene.drawChild(mustang);
+}
+
+function transition(from, to){
+    
 }
