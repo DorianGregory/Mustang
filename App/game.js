@@ -21,10 +21,10 @@ function startGame(){
 }
 function startMenu(){
     isPlaying = true;
+    mustang.track = 2;
 }
 function gameUpdate(){
     scene.drawChild(background);
-    if()
     mustang.height = mustang.track*canvas.height/3 + canvas.height/6;
     scene.drawChild(mustang);
 }
