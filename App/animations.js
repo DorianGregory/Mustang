@@ -33,11 +33,13 @@ mustang.changeAnimation=function(newState){
     animationCounter=0;
     animationState=newState;
 }*/
-mustang.speed=5;        //maximum speed the horse will move
-mustang.x=50;
+mustang.speed=5;        //maximum speed
+mustang.x=50;               //current position
 mustang.y=50;
-mustang.xSpeed=0;
+mustang.xSpeed=0;           //current speed
 mustang.ySpeed=0;
+mustang.moveX=mustang.x;            //move orders, not currently used so ignore for now.
+mustang.moveY=mustang.y;
 var trackYValues={50,150,200};      //y values of the track
 function updatePosition(movingobj){
     movingobj.x=movingobj.x+movingobj.xSpeed;
@@ -47,6 +49,7 @@ function moveHorse(){
     //lerps the horse to the current track.
     //The objects new position must be calculated every update.
     moveTo(mustang.x,trackYValues[mustang.track],mustang);
+    updatePosition(mustang);
 }
 
 function moveTo( newX, newY,moveObj){
