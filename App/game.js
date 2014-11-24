@@ -1,4 +1,3 @@
-//hello
 
 //main character
 var mustang = new Child("Gogh.jpg", 10, 200, 200, 100);
