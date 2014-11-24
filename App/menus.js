@@ -19,10 +19,19 @@ var startMenu = function(){
     menu.background = new Child("background.png", 0, 0, canvas.width, canvas.height);
     
     //the playbutton, an instantiated menubutton
-    menu.playButton = new menuButton(new Child("playbutton.jpg", canvasWidth / 2, canvasHeight / 3, canvasWidth / 3, canvasHeight / 5));
+    menu.playButton = new menuButton(new Child("playbutton.jpg", canvasWidth / 3,  2 * canvasHeight / 5, canvasWidth / 3, canvasHeight / 5));
     
-    menu.playButton.onClick = function() {
+    //the onClick function; works on the buttonchild property of the menubutton object
+    menu.playButton.buttonChild.onClick = function(){
         startGame();
+    }
+    
+    //the mutebutton, an instantiated menubutton
+    menu.soundButton = new soundButton(new Child("mutebutton.jpg", 3 * canvasWidth / 7, 4 * canvasHeight / 5, canvasWidth / 7, canvasHeight / 7));
+    
+    //the onClick function, works on the buttonchild property of the menubutton object
+    menu.soundButton.buttonChild.onClick = function(){
+        //here will be sound on/off code
     }
     
 }
