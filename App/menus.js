@@ -40,5 +40,6 @@ var startMenu = function(){
 function menuUpdate(){
     scene.clear();
     scene.drawChild(menu.background);
-    scene.drawChild(playButton);
+    scene.drawChild(menu.playButton.buttonChild);
+    scene.drawChild(menu.soundButton.buttonChild);
 }
