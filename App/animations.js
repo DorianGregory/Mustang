@@ -33,7 +33,7 @@ mustang.changeAnimation=function(newState){
     animationCounter=0;
     animationState=newState;
 }*/
-mustang.speed=5;        //maximum speed
+/*mustang.speed=5;        //maximum speed
 mustang.x=50;               //current position
 mustang.y=50;
 mustang.xSpeed=0;           //current speed
@@ -65,4 +65,4 @@ function moveTo( newX, newY,moveObj){
     }
     else{
         moveObj.xSpeed=0;
-        moveObj.ySpeed=0;}
+        moveObj.ySpeed=0;}*/
