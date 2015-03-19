@@ -3,10 +3,10 @@ var canvas;
 var context;
 
 //LOAD JS FILE
-ejecta.include('master.js');
 ejecta.include('game.js');
 ejecta.include('menus.js');
 ejecta.include('animations.js');
+ejecta.include('master.js');
 //LOAD JS FILE
 
 //gets canvas, sets size, gets context

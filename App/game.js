@@ -5,7 +5,7 @@ mustang.track = 1;
 mustang.speed = 1;
 var background = new Child("background.jpg", 0, 0, canvas.width, canvas.height);
 //menu or game
-var isPlaying = true;
+var isPlaying = false;
 //mustang.transitioning = {};
 //mustang.transitioning =
 //to call when starting game from menu
