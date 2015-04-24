@@ -73,7 +73,7 @@ mustang.xSpeed=0;           //current speed
 mustang.ySpeed=0;
 mustang.moveX=mustang.x;            //move orders, not currently used so ignore for now.
 mustang.moveY=mustang.y;
-var trackYValues={50,150,200};      //y values of the track
+var trackYValues=[50,150,200];      //y values of the track
 function updatePosition(movingobj){
 	movingobj.x=movingobj.x+movingobj.xSpeed;
 	movingobj.y=movingobj.y+movingobj.ySpeed;
@@ -99,3 +99,4 @@ function moveTo( newX, newY,moveObj){
 	else{
 		moveObj.xSpeed=0;
 		moveObj.ySpeed=0;}
+}

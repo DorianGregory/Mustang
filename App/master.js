@@ -1,5 +1,6 @@
 //the most important part; controls everything else
 
+var isPlaying = false;
 initiate();
 //set up the scene variable
 var scene = new Scene();
@@ -19,3 +20,16 @@ function update(){
         menuUpdate();
     }
 }
+
+/*function gameUpdate(){
+    scene.drawChild(background);
+    mustang.y = mustang.track*canvas.height/3 + canvas.height/6;
+    scene.drawChild(mustang);
+    obstacleSpawn();
+    mustang.speed = getSpeed(game.score);
+    
+    for(var i=0; i<obstacles.length;i++){
+        obstacles[i].x-= mustang.speed;
+        scene.drawChild(obstacles[i]);
+    }
+}*/
