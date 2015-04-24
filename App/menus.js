@@ -31,15 +31,7 @@ function startMenu(lastScore, highScore, byrdQuote) {
     //the mutebutton child, to be changed to when the sound is on
     muteButton = new Child("mutebutton.png", 17 * (canvasWidth / 20), 11 * (canvasHeight / 14), 2 * (canvasHeight / 14), 2 * (canvasHeight / 14));
     
-    //the unmutebutton child, to be changed to when the sound is off
-    unmuteButton = new Child("unmutebutton.png", 17 * (canvasWidth / 20), 11 * (canvasHeight / 14), 2 * (canvasHeight / 14), 2 * (canvasHeight / 14));
-    
-    //the soundbutton, an instantiated child; its function when tapped WILL BE to mute or unmute
-    //we're still working on the sound code (we haven't started it)
-    //it has to change the child, so there's a little fiddling we do in the onclick method
-    soundButton = muteButton;
-    
-    soundButton.onclick = function(){
+    muteButton.onclick = function(){
         
         if (sound) {
             //here is where the sound will be turned off
@@ -60,6 +52,16 @@ function startMenu(lastScore, highScore, byrdQuote) {
         } //note to potential bugcatchers: I am so sorry. I am new to javascript, please forgive me
         
     }
+    
+    //the unmutebutton child, to be changed to when the sound is off
+    unmuteButton = new Child("unmutebutton.png", 17 * (canvasWidth / 20), 11 * (canvasHeight / 14), 2 * (canvasHeight / 14), 2 * (canvasHeight / 14));
+    
+    unmuteButton.onclick = muteButton.onclick;
+    
+    //the soundbutton, an instantiated child; its function when tapped WILL BE to mute or unmute
+    //we're still working on the sound code (we haven't started it)
+    //it has to change the child, so there's a little fiddling we do in the onclick method
+    soundButton = muteButton;
     
     lastScoreLabel = new Text('Last score: ' + lastScore, '24pt Helvetica', 'Black', canvasWidth / 5, 5 * (canvasHeight / 7)); //I don't have the vaguest idea if that's the right thing for color, otherwise
                             //000000
